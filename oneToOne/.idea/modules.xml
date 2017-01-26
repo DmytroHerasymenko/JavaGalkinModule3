@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/HibernateEntityManager.iml" filepath="$PROJECT_DIR$/HibernateEntityManager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oneToOne.iml" filepath="$PROJECT_DIR$/oneToOne.iml" />
     </modules>
   </component>
 </project>
