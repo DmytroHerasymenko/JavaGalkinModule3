@@ -13,6 +13,8 @@ public class Address {
     int id;
     @Column(name = "clientAddress")
     String clientAddress;
+    @OneToOne (mappedBy = "addres", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    Client client = new Client();
 
     public Address() {
     }
@@ -31,5 +33,13 @@ public class Address {
 
     public void setClientAddress(String clientAddress) {
         this.clientAddress = clientAddress;
+    }
+
+    public Client getClient() {
+        return client;
+    }
+
+    public void setClient(Client client) {
+        this.client = client;
     }
 }

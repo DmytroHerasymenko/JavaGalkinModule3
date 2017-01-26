@@ -42,6 +42,14 @@ public class Main {
         System.out.println(c3.getName());
         System.out.println(c3.getAddres().getClientAddress());
 
+        entityManager.getTransaction().begin();
+        Address a = entityManager
+                .createQuery("FROM base.Address p WHERE clientAddress=:addressName", Address.class)
+                .setParameter("addressName", "Universe").getSingleResult();
+        entityManager.getTransaction().commit();
+        System.out.println(a.getClientAddress());
+        System.out.println(a.getClient().getName());
+
         entityManager.close();
         sessionFactory.close();
     }
