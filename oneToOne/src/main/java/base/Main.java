@@ -13,26 +13,36 @@ public class Main {
         SessionFactory sessionFactory = (SessionFactory) Persistence.createEntityManagerFactory("org.hibernate.jpa");
         EntityManager entityManager = sessionFactory.createEntityManager();
 
-        /*entityManager.getTransaction().begin();
+
+
+        Client c1 = new Client();
+        c1.setName("Vasyl");
+        c1.setSurname("Pupko");
+        Client c2 = new Client();
+        c2.setName("Petro");
+        c2.setSurname("Bulba");
+
+
+        entityManager.getTransaction().begin();
+
         Address address1 = new Address();
         Address address2 = new Address();
+        address1.setClient(c1);
+        address2.setClient(c2);
         address1.setClientAddress("Universe");
         address2.setClientAddress("Selo");
+
+        c1.setAddres(address1);
+        c2.setAddres(address2);
+
         entityManager.persist(address1);
         entityManager.persist(address2);
         entityManager.getTransaction().commit();
         entityManager.getTransaction().begin();
-        Client c1 = new Client();
-        Client c2 = new Client();
-        c1.setName("Vasyl");
-        c2.setName("Petro");
-        c1.setSurname("Pupko");
-        c2.setSurname("Bulba");
-        c1.setAddres(address1);
-        c2.setAddres(address2);
+
         entityManager.persist(c1);
         entityManager.persist(c2);
-        entityManager.getTransaction().commit();*/
+        entityManager.getTransaction().commit();
 
         entityManager.getTransaction().begin();
         Client c3 = entityManager
