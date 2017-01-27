@@ -53,4 +53,9 @@ public class Client {
     public void setAddres(Address addres) {
         this.addres = addres;
     }
+
+    @Override
+    public String toString() {
+        return name + " " + surname;
+    }
 }
