@@ -41,16 +41,15 @@ public class Main {
         address3.setClient(c3);
         address3.setClientAddress("Kyiv");
 
-        c1.setAddres(address1);
-        c2.setAddres(address2);
-        c3.setAddres(address3);
-
         entityManager.persist(address1);
         entityManager.persist(address2);
         entityManager.persist(address3);
         entityManager.getTransaction().commit();
 
         entityManager.getTransaction().begin();
+        c1.setAddres(address1);
+        c2.setAddres(address2);
+        c3.setAddres(address3);
         entityManager.persist(c1);
         entityManager.persist(c2);
         entityManager.persist(c3);
