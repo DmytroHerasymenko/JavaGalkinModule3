@@ -1,0 +1,9 @@
+
+1squid:S1220""Move this file to a named package.
+V
+squid:S106";Replace this usage of System.out or System.err by a logger.(Ô·ê8Ñõöí£+
+Vsquid:S1118":Add a private constructor to hide the implicit public one.(öı²Ê8‹ù€î£+
+9squid:S2095"Close this "FileReader".(ğÁ«üÿÿÿÿ8Œî£+
+Vsquid:S1118":Add a private constructor to hide the implicit public one.(àªÅö8ÎÅìí£+
+[
+squid:S106";Replace this usage of System.out or System.err by a logger.(‘Ô¶Œúÿÿÿÿ8ƒÍõí£+
