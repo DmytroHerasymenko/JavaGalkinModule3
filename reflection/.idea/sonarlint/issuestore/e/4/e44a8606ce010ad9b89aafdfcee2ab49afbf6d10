@@ -1,0 +1,13 @@
+
+gsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ï•›Ñ8„¢í£+
+V
+squid:S106";Replace this usage of System.out or System.err by a logger.(¥ˆÝŽ8¹Ôí£+
+[
+squid:S106";Replace this usage of System.out or System.err by a logger.(ÓÃž»üÿÿÿÿ8…‚çí£+
+1squid:S1700"Rename field "a"(Þ‹®øÿÿÿÿ8ÄÞƒí£+
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Ôä¢óúÿÿÿÿ8ÿ·í£+
+Vsquid:S1118":Add a private constructor to hide the implicit public one.(àªÅö8Ñ«†í£+
+¢squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ãêœàýÿÿÿÿ8å……í£+
+V
+squid:S106";Replace this usage of System.out or System.err by a logger.(¥ˆÝŽ8ÌðÂí£+
+1squid:S1220""Move this file to a named package.

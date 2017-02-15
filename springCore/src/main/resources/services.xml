@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <context:annotation-config/>
+    <bean id="aircompany" class="AirCompany">
+        <property name="flights">
+            <list value-type="Flights">
+                <ref bean="flight1"/>
+                <ref bean="flight2"/>
+            </list>
+        </property>
+    </bean>
+    <bean id="flight1" class="Flights">
+        <property name="distance" value="100"/>
+        <property name="pilots">
+            <list value-type="Pilot">
+                <ref bean="pilot1"/>
+            </list>
+        </property>
+        <property name="plane">
+            <ref bean="plane1"/>
+        </property>
+        <property name="stuarts">
+            <list value-type="Stuart">
+                <ref bean="stuart1"/>
+            </list>
+        </property>
+        <property name="tickets">
+            <map>
+                <entry key="passanger1" value-ref="ticket1"/>
+                <entry key="passanger2" value-ref="ticket2"/>
+            </map>
+        </property>
+    </bean>
+    <bean id="flight2" class="Flights">
+        <property name="distance" value="200"/>
+        <property name="pilots">
+            <list value-type="Pilot">
+                <ref bean="pilot2"/>
+            </list>
+        </property>
+        <property name="plane">
+            <ref bean="plane2"/>
+        </property>
+        <property name="stuarts">
+            <list value-type="Stuart">
+                <ref bean="stuart2"/>
+            </list>
+        </property>
+        <property name="tickets">
+            <map>
+                <entry key="passanger3" value-ref="ticket3"/>
+                <entry key="passanger4" value-ref="ticket4"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="pilot1" class="Pilot">
+        <property name="salary" value="10"/>
+    </bean>
+    <bean id="pilot2" class="Pilot">
+        <property name="salary" value="15"/>
+    </bean>
+    <bean id="plane1" class="AirPlane">
+        <property name="fuel" value="200"/>
+    </bean>
+    <bean id="plane2" class="AirPlane">
+        <property name="fuel" value="250"/>
+    </bean>
+    <bean id="stuart1" class="Stuart">
+        <property name="salary" value="20"/>
+    </bean>
+    <bean id="stuart2" class="Stuart">
+        <property name="salary" value="25"/>
+    </bean>
+    <bean id="ticket1" class="Ticket">
+        <property name="price" value="40"/>
+    </bean>
+    <bean id="ticket2" class="Ticket">
+        <property name="price" value="41"/>
+    </bean>
+    <bean id="ticket3" class="Ticket">
+        <property name="price" value="40"/>
+    </bean>
+    <bean id="ticket4" class="Ticket">
+        <property name="price" value="40"/>
+    </bean>
+    </beans>

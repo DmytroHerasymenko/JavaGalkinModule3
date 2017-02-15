@@ -1,2 +1,4 @@
 
-Isquid:S1989"(Add a "try/catch" block for "getWriter".(¿—Èœùÿÿÿÿ8°Ê¢¢+
+Isquid:S1989"(Add a "try/catch" block for "getWriter".(¿—Èœùÿÿÿÿ8Ôÿ¥ñ£+
+Ysquid:S1854"8Remove this useless assignment to local variable "name".(Ÿ•ï‘ıÿÿÿÿ8¿ª¢ñ£+
+lsquid:CommentedOutCodeLine"<This block of commented-out lines of code should be removed.(Á³“ïøÿÿÿÿ8êñ£+
