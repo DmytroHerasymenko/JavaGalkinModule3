@@ -1,0 +1,27 @@
+
+7
+pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
+T
+$src/main/webapp/META-INF/context.xml,c/b/cbfb0d2e9b2b9fbf9d54374577c894a38643c6d0
+O
+src/main/webapp/WEB-INF/web.xml,2/e/2e22b6edd746fa3dc40ad7276c87c8d87d72a392
+i
+9src/main/java/ua/infopulse/servlet/ServletDispatcher.java,6/b/6b2a4a9fa82c7c170407cb9ed46cd4b7f77c6549
+_
+/src/main/java/ua/infopulse/command/Command.java,f/6/f63e2a928ef273e7a36f18cf14b21accadd853ab
+d
+4src/main/java/ua/infopulse/command/LoginCommand.java,8/7/8753d92fb0172d7a6dc197d1fefd35285f0c0087
+k
+;src/main/java/ua/infopulse/command/RegistrationCommand.java,a/d/adf7c366e66e5fbd184725ee722768ce1bcddc56
+U
+%src/main/webapp/WEB-INF/jsp/login.jsp,5/8/582bc84275d5b626d3b0f12b82e66269f2fac2a7
+\
+,src/main/webapp/WEB-INF/jsp/registration.jsp,8/6/863750b17f37d1bcb7d6ce621e6f066177b3cf66
+f
+6src/main/java/ua/infopulse/command/CommandFactory.java,b/7/b7fe9115b188ba87402d7b5d389e815b64e3249d
+f
+6src/main/java/ua/infopulse/service/ServiceFactory.java,f/6/f6b5646c38e1ea50bf0e8557f889c43d75caaad2
+r
+Bsrc/main/java/ua/infopulse/command/RegistrationHandlerCommand.java,9/4/9420fe7a04ec2fd8fc02e596a36e7c33c28e6c1f
+k
+;src/main/java/ua/infopulse/service/RegistrationService.java,7/7/77f36aee9223c594166e8fd070a5d3595747a0ee
