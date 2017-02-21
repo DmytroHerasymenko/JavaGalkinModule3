@@ -4,6 +4,14 @@
     <listener>
         <listener-class>ua.infopulse.listeners.ContextListener</listener-class>
     </listener>
+    <filter>
+        <filter-name>mySessionFilter</filter-name>
+        <filter-class>ua.infopulse.filters.SessionFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>mySessionFilter</filter-name>
+        <servlet-name>auth</servlet-name>
+    </filter-mapping>
     <servlet>
         <servlet-name>auth</servlet-name>
         <servlet-class>ua.infopulse.servlet.ServletDispatcher</servlet-class>

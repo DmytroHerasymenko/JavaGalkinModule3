@@ -23,7 +23,6 @@ public class CommandFactory {
 
     public Command getCommand(HttpServletRequest request){
         String[] command = request.getRequestURI().split("/");
-        System.out.println(command);
         return commands.get(command[3]);
     }
 
