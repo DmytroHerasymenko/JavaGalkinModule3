@@ -18,14 +18,13 @@ public class ServletDispatcher extends HttpServlet {
         Command command = factory.getCommand(request);
         command.execute(request, response);
     }
+
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         processRequest( request, response);
-
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         processRequest( request, response);
-
     }
 
 }
