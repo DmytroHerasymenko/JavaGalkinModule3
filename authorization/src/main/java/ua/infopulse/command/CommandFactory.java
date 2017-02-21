@@ -17,6 +17,8 @@ public class CommandFactory {
         commands.put("registration", new RegistrationCommand());
         commands.put("login", new LoginCommand());
         commands.put("registration_handler", new RegistrationHandlerCommand());
+        commands.put("login_handler", new LoginHandlerCommand());
+        commands.put("profile", new ProfileCommand());
     }
 
     public Command getCommand(HttpServletRequest request){

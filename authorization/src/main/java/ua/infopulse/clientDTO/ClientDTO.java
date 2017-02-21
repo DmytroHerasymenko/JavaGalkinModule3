@@ -1,9 +1,9 @@
-package ua.infopulse.client;
+package ua.infopulse.clientDTO;
 
 /**
  * Created by dima on 19.02.17.
  */
-public class Client {
+public class ClientDTO {
     private String name;
     private String login;
     private String password;

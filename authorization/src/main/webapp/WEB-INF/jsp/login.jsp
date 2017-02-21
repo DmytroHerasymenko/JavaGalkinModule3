@@ -5,6 +5,7 @@
     <title>login</title>
 </head>
 <body>
+${sessionScope.error}
 <form action="./login_handler" method="post">
     login<input type="text" name="login"/>
     <br/>

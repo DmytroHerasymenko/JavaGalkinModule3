@@ -1,28 +1,56 @@
 package ua.infopulse.dao;
 
-import ua.infopulse.client.Client;
+import ua.infopulse.clientDTO.ClientDTO;
+import ua.infopulse.domain.Client;
+import ua.infopulse.utils.EntityManagerUtil;
 
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 
 /**
  * Created by dima on 19.02.17.
  */
 public class ClientDAO {
 
-    public boolean insert(Client client) throws SQLException {
-
-        String insertTableSQL = "INSERT INTO clients (name, login, password) VALUES (?,?,?)";
-        try (PreparedStatement preparedStatement = DAOFactory.getInstance().getConnection().prepareStatement(insertTableSQL)) {
-            preparedStatement.setString(1, client.getName());
-            preparedStatement.setString(2, client.getLogin());
-            preparedStatement.setString(3, client.getPassword());
-
-            preparedStatement.execute();
+    public boolean insert(ClientDTO clientDTO) {
+        EntityManager entityManager = EntityManagerUtil.getEntityManger();
+        try {
+            entityManager.getTransaction().begin();
+            Client client = new Client();
+            client.setName(clientDTO.getName());
+            client.setLogin(clientDTO.getLogin());
+            client.setPassword(clientDTO.getPassword());
+            entityManager.persist(client);
+            entityManager.getTransaction().commit();
             return true;
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            //get specialize exception!!!!
+        } catch (Exception e){
             return false;
+        } finally {
+            entityManager.close();
+        }
+    }
+
+    public ClientDTO getClientDAOByLoginAndPassword(ClientDTO clientDTO){
+        EntityManager entityManager = EntityManagerUtil.getEntityManger();
+        Client client = null;
+        try {
+            entityManager.getTransaction().begin();
+            client = entityManager
+                    .createQuery("SELECT c FROM ua.infopulse.domain.Client c WHERE c.login = :login AND c.password = :password", Client.class)
+                    .setParameter("login", clientDTO.getLogin())
+                    .setParameter("password", clientDTO.getPassword())
+                    .getSingleResult();
+            entityManager.getTransaction().commit();
+        } catch (NoResultException e){
+            client = null;
+        }
+        entityManager.close();
+
+        if(client != null) {
+            return clientDTO;
+        } else {
+            return null;
         }
     }
 }
